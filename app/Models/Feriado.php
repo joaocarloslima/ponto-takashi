@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Feriado extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'nome',
+        'data',
+    ];
+
+    public function getDataFormatadaAttribute()
+    {
+        return date('d/m/Y', strtotime($this->attributes['data']));
+    }
+}

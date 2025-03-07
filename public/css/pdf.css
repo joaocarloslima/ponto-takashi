@@ -1,0 +1,57 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    border: solid 1px #000;
+    width: 100%;
+}
+
+th{
+    background-color: #aaaaaa;
+    padding: 3px;
+}
+
+td{
+    padding: 5px;
+    text-align: center;
+}
+
+tr td:nth-child(2) {
+    border-right: solid 1px #000;
+}
+
+td.small{
+    width: 100px;
+}
+
+.finalDeSemana{
+    background-color: #aaaaaa;
+}
+
+.logo{
+    width: 200px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.center{
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+
+
+}
