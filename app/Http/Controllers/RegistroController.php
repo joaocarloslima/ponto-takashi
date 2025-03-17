@@ -61,8 +61,13 @@ class RegistroController extends Controller
 
         $request->merge(['funcionario_id' => $funcionario->id]);
 
-        $datahora = new DateTime('now', new \DateTimeZone('America/Sao_Paulo'));
+        $datahora = (new DateTime('now', new \DateTimeZone('America/Sao_Paulo')))->format('Y-m-d H:i:s');
+
         $request->merge(['datahora' => $datahora]);
+        $request->merge(['latitude' => 0]);
+        $request->merge(['longitude' => 0]);
+        $request->merge(['manual' => 0]);
+
 
         Registro::create($request->all());
 
