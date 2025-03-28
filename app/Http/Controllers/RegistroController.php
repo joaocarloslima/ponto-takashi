@@ -51,11 +51,11 @@ class RegistroController extends Controller
 
     public function registrar(Request $request)
     {
-        $funcionario = Funcionario::where('matricula', $request->input('matricula'))->first();
+        $funcionario = Funcionario::where('rfid', $request->input('matricula'))->first();
 
         if (!$funcionario) {
             return response()->json([
-                'message' => 'Matrícula não encontrada!'
+                'message' => 'ID não encontrado!'
             ], 404);
         }
 

@@ -18,6 +18,7 @@ class Funcionario extends Authenticatable
         'telefone',
         'password',
         'matricula',
+        'rfid',
         'foto'
     ];
 

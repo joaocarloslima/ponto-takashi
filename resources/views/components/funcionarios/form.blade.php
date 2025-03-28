@@ -29,6 +29,21 @@
                 <div class="text-error">{{ $message }}</div>
             @enderror
 
+            <label for="rfid">RFID</label>
+            <input id="rfid"
+                name="rfid"
+                type="text"
+                @isset($update) 
+                    value="{{ $funcionario->rfid }}" 
+                @else
+                    value="{{ old('rfid') }}"
+                @endisset
+                class="@error('rfid') is-invalid @enderror"
+            >
+            @error('rfid')
+                <div class="text-error">{{ $message }}</div>
+            @enderror
+
             <label for="nome">Nome</label>
             <input id="nome"
                 name="nome"

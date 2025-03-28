@@ -25,7 +25,8 @@ class FuncionarioFormRequest extends FormRequest
             'matricula' => 'required',
             'nome' => 'required|min:3|max:100',
             'email' => 'required|email',
-            'telefone' => 'required'
+            'telefone' => 'required',
+            'rfid' => 'nullable|string|max:50'
         ];
     }
 
@@ -50,7 +51,8 @@ class FuncionarioFormRequest extends FormRequest
             'matricula.required' => 'O campo matrícula é obrigatório',
             'matricula.unique' => 'A matrícula informada já está cadastrada',
             'foto.required' => 'O campo foto é obrigatório',
-            'foto.image' => 'O campo foto deve ser uma imagem válida'
+            'foto.image' => 'O campo foto deve ser uma imagem válida',
+            'rfid.max' => 'O campo RFID deve ter no máximo 50 caracteres'
         ];
     }
 
