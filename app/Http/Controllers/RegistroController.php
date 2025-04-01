@@ -72,7 +72,8 @@ class RegistroController extends Controller
         Registro::create($request->all());
 
         return response()->json([
-            'message' => 'Registro realizado com sucesso!'
+            'message' => 'Registro realizado com sucesso!',
+            'funcionario' => $funcionario->nome,
         ], 201);
     }
 
